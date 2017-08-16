@@ -1,0 +1,23 @@
+
+<div>
+{% csrf_token %}
+<table id="">
+    <tr>
+        <th>Event Name</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Event Information</th>
+        <th>Date</th>
+    </tr>
+    {% for event in data %}
+    <tr>
+        <td>{{ event.eventname }}</td>
+        <td>{{ event.firstname }}</td>
+        <td>{{ event.lastname }}</td>
+        <td>{{ event.info1 }}</td>
+        <td>{{ event.date }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+</div>
